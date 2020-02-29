@@ -1,0 +1,99 @@
+ @charset "UTF-8";
+
+
+body{  
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.form-control-lg::placeholder{
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    font-size: 16pt;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    box-sizing : border-box;
+    margin-bottom: 0;
+}
+
+.checked {
+    color: goldenrod;
+    background: linear-gradient(to bottom left,#b2fefa, #0ed2f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  /** reference : https://stackoverflow.com/a/22570536 **/
+
+  .star-rating {
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  /* width: 250px; remove this */
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: url('starDisabled.svg');
+  background-size: contain;
+}
+.star-rating i {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  background: url('star.svg');
+  background-size: contain;
+}
+.star-rating input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+.star-rating input:hover + i,
+.star-rating input:checked + i {
+  opacity: 1;
+}
+.star-rating i ~ i {
+  width: 40%;
+}
+.star-rating i ~ i ~ i {
+  width: 60%;
+}
+.star-rating i ~ i ~ i ~ i {
+  width: 80%;
+}
+.star-rating i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+::after,
+::before {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.star-rating.star-5 {width: 180px;}
+.star-rating.star-5 input,
+.star-rating.star-5 i {width: 20%;}
+.star-rating.star-5 i ~ i {width: 40%;}
+.star-rating.star-5 i ~ i ~ i {width: 60%;}
+.star-rating.star-5 i ~ i ~ i ~ i {width: 80%;}
+.star-rating.star-5 i ~ i ~ i ~ i ~i {width: 100%;}
+
