@@ -2,6 +2,7 @@
     "require" : {
         "php": ">=5.4",
         "ext-pdo" : "*",
-        "ext-pdo_pgsql" : "*"
+        "ext-pdo_pgsql" : "*",
+        "csanquer/pdo-service-provider": "~1.1dev"
     }
 }
