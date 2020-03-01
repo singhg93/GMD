@@ -1,0 +1,24 @@
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Notice:  Undefined property: stdClass::$items in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:28:20 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Notice:  Trying to get property 'volumeInfo' of non-object in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:28:20 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Notice:  Trying to get property 'description' of non-object in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:28:20 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:28:20 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Notice:  Undefined property: stdClass::$items in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:30:06 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Notice:  Trying to get property 'volumeInfo' of non-object in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:30:06 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Notice:  Trying to get property 'description' of non-object in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php on line 55
+[05-Aug-2019 23:30:06 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:30:06 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\teamGMD.php:0
+[05-Aug-2019 23:34:44 America/Vancouver] PHP Notice:  Undefined index: userId in C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\GroupProject-postReview.php on line 58
+[05-Aug-2019 23:34:44 America/Vancouver] PHP Stack trace:
+[05-Aug-2019 23:34:44 America/Vancouver] PHP   1. {main}() C:\Users\Darren\Google Drive\School\Courses\Summer 2019\CSIS 3280\Group Project\updatedProject\GroupProject_GMD\GroupProject-postReview.php:0
+[06-Aug-2019 00:00:03 America/Vancouver] Api not working
+[06-Aug-2019 00:03:15 America/Vancouver] Api not working
+[06-Aug-2019 00:03:23 America/Vancouver] Api not working
