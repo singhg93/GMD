@@ -17,17 +17,17 @@ class UserDAO {
 
     static function createUser( User $newUser ) {
 
-        $sqlQuery = "INSERT INTO users (userName, firstName, lastName, email, passwordHash) VALUES (:userName,  :firstName, :lastName, :email, :passwordHash);";
+        $sqlQuery = "INSERT INTO users (username, firstname, lastname, email, passwordhash) VALUES (:username,  :firstname, :lastname, :email, :passwordhash);";
 
         //Query
         self::$db->query($sqlQuery);
 
         //Bind
-        self::$db->bind( ':userName', $newUser->getUserName());
-        self::$db->bind( ':firstName', $newUser->getFirstName());
-        self::$db->bind( ':lastName', $newUser->getLastName());
+        self::$db->bind( ':username', $newUser->getUserName());
+        self::$db->bind( ':firstname', $newUser->getFirstName());
+        self::$db->bind( ':lastname', $newUser->getLastName());
         self::$db->bind( ':email', $newUser->getEmail());
-        self::$db->bind( ':passwordHash', $newUser->getPasswordHash());
+        self::$db->bind( ':passwordhash', $newUser->getPasswordHash());
 
         //Execute
         self::$db->execute();
@@ -39,13 +39,13 @@ class UserDAO {
         self::$db->query($sqlForeignKeyZero);
         self::$db->execute();
 
-        $sqlDelete = "DELETE FROM users WHERE userId=:userId;";
+        $sqlDelete = "DELETE FROM users WHERE userid=:userid;";
 
         //query
         self::$db->query($sqlDelete);
 
         //bind
-        self::$db->bind(':userId', $userId);
+        self::$db->bind(':userid', $userId);
 
         //execute
         self::$db->execute();
@@ -58,13 +58,13 @@ class UserDAO {
 
     static function getUser(string $userName) {
 
-        $sqlDelete = "SELECT * FROM users WHERE userName=:userName LIMIT 1;";
+        $sqlDelete = "SELECT * FROM users WHERE username=:username LIMIT 1;";
 
         //query
         self::$db->query($sqlDelete);
 
         //bind
-        self::$db->bind(':userName', $userName);
+        self::$db->bind(':username', $userName);
 
         //execute
         self::$db->execute();

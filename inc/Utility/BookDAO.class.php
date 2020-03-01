@@ -26,7 +26,7 @@ class BookDAO {
     static function createBook ( user $newBook ) {
 
         // write the query to add the book
-        $sqlQuery = "INSERT INTO books ( isbn, title, author, publicationYear ) VALUES (:isbn, :title, :author, :publicationYear);";
+        $sqlQuery = "INSERT INTO books ( isbn, title, author, publicationyear ) VALUES (:isbn, :title, :author, :publicationyear);";
 
         //Query
         self::$db->query($sqlQuery);
@@ -35,7 +35,7 @@ class BookDAO {
         self::$db->bind(':isbn', $newBook->getIsbn());
         self::$db->bind(':title', $newBook->getTitle());
         self::$db->bind(':author', $newBook->getAuthor());
-        self::$db->bind(':publicationYear', $newBook->getPublicationYear());
+        self::$db->bind(':publicationyear', $newBook->getPublicationYear());
 
         //execute
         self::$db->execute();

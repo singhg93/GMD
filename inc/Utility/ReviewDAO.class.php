@@ -26,18 +26,18 @@ class ReviewDAO {
     static function addReview( Review $review ) {
 
         // sql statement to be executed
-        $sqlInsert = "INSERT INTO reviews (userId, userName, bookId, rating, reviewText, lastUpdate) VALUES (:userId, :userName, :bookId, :rating, :reviewText, :lastUpdate);";
+        $sqlInsert = "INSERT INTO reviews (userid, username, bookid, rating, reviewtext, lastupdate) VALUES (:userid, :username, :bookid, :rating, :reviewtext, :lastupdate);";
 
         // prepare the query
         self::$db->query($sqlInsert);
 
         // bind the values
-        self::$db->bind(':userId', $review->getUserId());
-        self::$db->bind(':userName', $review->getUserName());
-        self::$db->bind(':bookId', $review->getBookId());
+        self::$db->bind(':userid', $review->getUserId());
+        self::$db->bind(':username', $review->getUserName());
+        self::$db->bind(':bookid', $review->getBookId());
         self::$db->bind(':rating', $review->getRating());
-        self::$db->bind(':reviewText', $review->getReviewText());
-        self::$db->bind(':lastUpdate', $review->getLastUpdate());
+        self::$db->bind(':reviewtext', $review->getReviewText());
+        self::$db->bind(':lastupdate', $review->getLastUpdate());
 
         // execute
         self::$db->execute();
@@ -47,13 +47,13 @@ class ReviewDAO {
     static function getBookReviews( int $bookId ){
 
         //sql statement
-        $sqlQuery = 'SELECT * FROM reviews WHERE bookId=:bookId ORDER BY lastUpdate DESC;';
+        $sqlQuery = 'SELECT * FROM reviews WHERE bookid=:bookid ORDER BY lastupdate DESC;';
 
         //prepare the query
         self::$db->query( $sqlQuery );
 
         // bind the values
-        self::$db->bind(':bookId', $bookId );
+        self::$db->bind(':bookid', $bookId );
 
         // execute
         self::$db->execute();
@@ -65,14 +65,14 @@ class ReviewDAO {
     static function getUserReviews( int $userId , int $bookId){
 
         //sql statement
-        $sqlQuery = 'SELECT * FROM reviews WHERE userId=:userId AND bookId=:bookId ORDER BY lastUpdate DESC;';
+        $sqlQuery = 'SELECT * FROM reviews WHERE userid=:userid AND bookid=:bookid ORDER BY lastupdate DESC;';
 
         //prepare the query
         self::$db->query( $sqlQuery );
 
         // bind the values
-        self::$db->bind(':userId', $userId );
-        self::$db->bind(':bookId', $bookId );
+        self::$db->bind(':userid', $userId );
+        self::$db->bind(':bookid', $bookId );
 
         // execute
         self::$db->execute();
@@ -85,13 +85,13 @@ class ReviewDAO {
     static function getSingleReview( int $reviewId ) {
 
         // sql statement
-        $sqlQuery = 'SELECT * FROM reviews WHERE reviewId=:reviewId;';
+        $sqlQuery = 'SELECT * FROM reviews WHERE reviewid=:reviewid;';
 
         // prepare the query
         self::$db->query( $sqlQuery );
 
         //bind the values
-        self::$db->bind( ':reviewId', $reviewId );
+        self::$db->bind( ':reviewid', $reviewId );
 
         //execute
         self::$db->execute();
@@ -105,13 +105,13 @@ class ReviewDAO {
     static function deleteReview( int $reviewId ) {
 
         // sql statement
-        $sqlDelete = "DELETE FROM reviews WHERE reviewId=:reviewId;";
+        $sqlDelete = "DELETE FROM reviews WHERE reviewid=:reviewid;";
 
         // prepare
         self::$db->query( $sqlDelete );
 
         //bind the values
-        self::$db->bind( ':reviewId', $reviewId );
+        self::$db->bind( ':reviewid', $reviewId );
 
         // execute
         self::$db->execute();
@@ -123,16 +123,16 @@ class ReviewDAO {
     static function updateReview( Review $review ) {
 
         //sql statement
-        $sqlUpdate = "UPDATE reviews SET rating=:rating, reviewText=:reviewText, lastUpdate=:lastUpdate WHERE reviewId=:reviewId;";
+        $sqlUpdate = "UPDATE reviews SET rating=:rating, reviewtext=:reviewtext, lastupdate=:lastupdate WHERE reviewid=:reviewid;";
 
         //prepare
         self::$db->query( $sqlUpdate );
 
         //bind the values
         self::$db->bind( ':rating', $review->getRating());
-        self::$db->bind( ':reviewText', $review->getReviewText());
-        self::$db->bind( ':lastUpdate', $review->getLastUpdate());
-        self::$db->bind( ':reviewId', $review->getReviewId());
+        self::$db->bind( ':reviewtext', $review->getReviewText());
+        self::$db->bind( ':lastupdate', $review->getLastUpdate());
+        self::$db->bind( ':reviewid', $review->getReviewId());
 
         //execute
         self::$db->execute();
