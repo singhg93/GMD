@@ -63,8 +63,7 @@ if (isset($_POST['username'])) {
         }
 
     } else {
-        $message[] = "We could not find any user with those details.";
-        $message[] = "Please check the ";
+        $message[] = "Invalid Credentials!";
     }
 }
 
