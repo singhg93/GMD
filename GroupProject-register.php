@@ -20,6 +20,11 @@ if( !empty( $_POST )){
     if(UserDAO::getUser($_POST['username']) != false){
         
         $message[] = 'Username already in use';
+	Page::$title = "Errors";
+	Page::header();
+	Page::showMessage($message);
+	Page::registerForm();
+	Page::footer();
         
     }else {
         
@@ -34,8 +39,8 @@ if( !empty( $_POST )){
             // show the errors with the form
             Page::$title =  "Please correct the following errors";
             Page::header();
-            Page::registerForm();
             Page::showMessage($form_errors);
+            Page::registerForm();
             Page::footer();
         } else {
             
