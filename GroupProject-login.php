@@ -54,7 +54,7 @@ if (isset($_POST['username'])) {
 
             } else {
                 //send the user to the homepage
-                header("Location: teamGMD.php");
+                header("Location: index.php");
             }
             exit;
 

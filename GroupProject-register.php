@@ -34,7 +34,6 @@ if( !empty( $_POST )){
             // show the errors with the form
             Page::$title =  "Please correct the following errors";
             Page::header();
-            Page::errors();
             Page::registerForm();
             Page::showMessage($form_errors);
             Page::footer();

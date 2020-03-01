@@ -25,14 +25,14 @@ if(LoginManager::verifyLogin()){
     
     
     // Send the user to book list page
-    header( "Refresh: 1; url=teamGMD.php" );
+    header( "Refresh: 1; url=index.php" );
     
     //display messages
     Page::showMessage($message);
     
 //If user not logged in take them to homepage
 }else{
-    header("Location: teamGMD.php");
+    header("Location: index.php");
 }
 
 // display page footer
