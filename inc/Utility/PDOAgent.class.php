@@ -21,7 +21,9 @@ class PDOAgent  {
             $this->className = $className;
 
             //Build the DSN
-            $this->dsn = 'mysql:host='. $this->host .';dbname='.$this->dbname;
+            //local my sql
+            //$this->dsn = 'mysql:host='. $this->host .';dbname='.$this->dbname;
+            $this->dsn = 'sqlsrv:server ='. $this->host .';dbname='.$this->dbname;
             //set PDO options
             $options = array(
                 PDO::ATTR_PERSISTENT => true,
