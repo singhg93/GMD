@@ -27,7 +27,7 @@ class Page {
 
         <nav class="navbar navbar-expand navbar-light bg-white pt-3">
             <div class="collapse navbar-collapse">
-                <a class="nav-link text-dark" href="teamGMD.php">GMD Books</a>
+                <a class="nav-link text-dark" href="index.php">GMD Books</a>
             </div>
         <?php
 
