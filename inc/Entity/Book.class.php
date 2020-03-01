@@ -3,16 +3,16 @@
 class Book {
 
     //attributes
-    private $bookId ;
+    private $bookid ;
     private $isbn;
     private $title;
     private $author;
-    private $publicationYear;
+    private $publicationyear;
 
     //getters
 
     public function getBookId () : int {
-        return $this->bookId ;
+        return $this->bookid ;
     }
 
     public function getISBN () : string {
@@ -28,7 +28,7 @@ class Book {
     }
 
     public function getPublicationYear () : string {
-        return $this->publicationYear ;
+        return $this->publicationyear ;
     }
 
     //setters
@@ -53,7 +53,7 @@ class Book {
 
     public function setPublicationYear ( string $publicationYear ) {
 
-        $this->publicationYear = $publicationYear;
+        $this->publicationyear = $publicationYear;
 
     }
 

@@ -3,29 +3,29 @@
 class User {
 
     //attributes
-    private $userId;
-    private $userName;
-    private $firstName;
-    private $lastName;
+    private $userid;
+    private $username;
+    private $firstname;
+    private $lastname;
     private $email;
-    private $passwordHash;
+    private $passwordhash;
 
     //getters
 
     public function getUserId () : int {
-        return $this->userId;
+        return $this->userid;
     }
 
     public function getUserName () : string {
-        return $this->userName;
+        return $this->username;
     }
 
     public function getFirstName () : string {
-        return $this->firstName;
+        return $this->firstname;
     }
 
     public function getLastName () : string {
-        return $this->lastName;
+        return $this->lastname;
     }
 
     public function getEmail () : string {
@@ -33,21 +33,21 @@ class User {
     }
 
     public function getPasswordHash () : string {
-        return $this->passwordHash;
+        return $this->passwordhash;
     }
 
     //setters
 
     public function setUserName ( string $userName ) {
-        $this->userName = $userName;
+        $this->username = $userName;
     }
 
     public function setFirstName ( string $firstName ) {
-        $this->firstName = $firstName ;
+        $this->firstname = $firstName ;
     }
 
     public function setLastName ( string $lastName ) {
-        $this->lastName = $lastName ;
+        $this->lastname = $lastName ;
     }
 
     public function setEmail ( string $email ) {
@@ -55,7 +55,7 @@ class User {
     }
 
     public function setPasswordHash ( string $passwordHash ) {
-        $this->passwordHash = $passwordHash ;
+        $this->passwordhash = $passwordHash ;
     }
 
     public function verifyPassword(string $passwordToVerify) {

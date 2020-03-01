@@ -3,35 +3,35 @@
 class Review {
 
     //attributes
-    private $reviewId ;
-    private $userId ;
-    private $userName ;
-    private $bookId ;
+    private $reviewid ;
+    private $userid ;
+    private $username ;
+    private $bookid ;
     private $rating ;
-    private $reviewText ;
-    private $lastUpdate ;
+    private $reviewtext ;
+    private $lastupdate ;
 
     //getters
 
     public function getReviewId () : int {
 
-        return $this->reviewId ;
+        return $this->reviewid ;
 
     }
 
     public function getUserId () : int {
 
-        return $this->userId ;
+        return $this->userid ;
 
     }
 
     public function getUserName () : string {
-        return $this->userName;
+        return $this->username;
     }
 
     public function getBookId () : int {
 
-        return $this->bookId ;
+        return $this->bookid ;
 
     }
 
@@ -43,13 +43,13 @@ class Review {
 
     public function getReviewText () : string {
 
-        return $this->reviewText ;
+        return $this->reviewtext ;
 
     }
 
     public function getLastUpdate () : string {
 
-        return $this->lastUpdate ;
+        return $this->lastupdate ;
 
     }
 
@@ -57,19 +57,19 @@ class Review {
 
     public function setUserId ( int $userId ) {
 
-        $this->userId = $userId;
+        $this->userid = $userId;
 
     }
 
     public function setUserName ( string $userName ) {
 
-        $this->userName = $userName;
+        $this->username = $userName;
 
     }
 
     public function setBookId ( int $bookId ) {
 
-        $this->bookId = $bookId ;
+        $this->bookid = $bookId ;
 
     }
 
@@ -81,13 +81,13 @@ class Review {
 
     public function setReviewText ( string $reviewText ) {
 
-        $this->reviewText = $reviewText ;
+        $this->reviewtext = $reviewText ;
 
     }
 
     public function setLastUpdate ( string $lastUpdate ) {
 
-        $this->lastUpdate = $lastUpdate ;
+        $this->lastupdate = $lastUpdate ;
 
     }
 
