@@ -269,42 +269,41 @@ class Page {
     // function to show the post review form
     static function postReviewForm( $bookId, $location = null) { ?>
 
-       <div Class = "card border-3 col-md-8 m-auto py-5">
-          <h2 Class = "card-title m-auto">Create A Review</h2>
-            <div Class = "card-body py-5">
-              <Form Class = "form-group col-md-8 m-auto" Method = "POST" Action = "GroupProject-postReview.php">
+	<div Class = "card border-3 col-md-8 m-auto py-5">
+		<h2 Class = "card-title m-auto">Create A Review</h2>
+		<div Class = "card-body py-5">
+			<Form Class = "form-group col-md-8 m-auto" Method = "POST" Action = "GroupProject-postReview.php">
 
-                <input type="hidden" name="bookId" value="<?php echo $bookId; ?>">
-                <input type="hidden" name="action" value="newReview">
-                <?php 
-                    if ( $location != null ) {
-                     echo '<input type="hidden" name="location" value="'. htmlspecialchars($location).'">';
+				<input type="hidden" name="bookId" value="<?php echo $bookId; ?>">
+				<input type="hidden" name="action" value="newReview">
+				<?php 
+				if ( $location != null ) {
+				echo '<input type="hidden" name="location" value="'. htmlspecialchars($location).'">';
 
-                    }
-                ?>
-                <div Class = "text-center">
+				}
+				?>
+				<div Class = "text-center">
 
-                  <Label Class = "font-weight-bold" For = "reviewText">Leave A Review</Label>
-                  <Textarea Class = "form-control mb-4"  Type = "text" Placeholder = "Describe your experience"  name = "reviewText" Rows = "7" Maxlength = "1000"></Textarea>
-                
-                <Label Class = "font-weight-bold" For = "rating">How Would You Rate This Book?</Label>
-                <!--  reference : https://stackoverflow.com/a/22570536 -->
-                <span class="star-rating star-5" require>
-                <input type="radio" name="rating" value="1"><i></i>
-                <input type="radio" name="rating" value="2"><i></i>
-                <input type="radio" name="rating" value="3"><i></i>
-                <input type="radio" name="rating" value="4"><i></i>
-                <input type="radio" name="rating" value="5"><i></i>
-                </span>
-                </div>
-      
-                <div Class = "text-center">
-                  <Button Type = "submit" Class = "btn btn-info m-auto" Value = "Submit Review">Submit Review</Button>
-                </div>
-              </Form>
-            <div>
-          </div>
-        </div>
+					<Label Class = "font-weight-bold" For = "reviewText">Leave A Review</Label>
+					<Textarea Class = "form-control mb-4"  Type = "text" Placeholder = "Describe your experience"  name = "reviewText" Rows = "7" Maxlength = "1000"></Textarea>
+
+					<Label Class = "font-weight-bold" For = "rating">How Would You Rate This Book?</Label>
+				<!--  reference : https://stackoverflow.com/a/22570536 -->
+					<span class="star-rating star-5" require>
+						<input type="radio" name="rating" value="1"><i></i>
+						<input type="radio" name="rating" value="2"><i></i>
+						<input type="radio" name="rating" value="3"><i></i>
+						<input type="radio" name="rating" value="4"><i></i>
+						<input type="radio" name="rating" value="5"><i></i>
+					</span>
+				</div>
+
+				<div Class = "text-center">
+					<Button Type = "submit" Class = "btn btn-info m-auto" Value = "Submit Review">Submit Review</Button>
+				</div>
+			</Form>
+		</div>
+	</div>
 
     <?php   }
     // function to show the post review form
